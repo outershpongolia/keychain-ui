@@ -1,27 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Suspense } from 'react';
 import './App.css';
-import { Button } from 'react-daisyui';
+import { ToastContainer } from 'react-toastify';
+import { HelmetProvider } from 'react-helmet-async';
+import {ProviderComponentWrapper} from "./components/ProviderComponentWrapper";
+import AppRoutes from "./AppRoutes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button color="primary">Click me!</Button>
-      </header>
-    </div>
+      <HelmetProvider>
+        <Suspense fallback={<h1>Loading...</h1>}>
+            <ToastContainer position="top-right" autoClose={3000} />
+            <ProviderComponentWrapper component={<AppRoutes />} />
+        </Suspense>
+      </HelmetProvider>
   );
 }
 

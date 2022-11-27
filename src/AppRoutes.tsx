@@ -1,6 +1,6 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
-import {Link, Route, Routes, Outlet} from 'react-router-dom';
+import {Link, Route, Routes, Outlet, BrowserRouter} from 'react-router-dom';
 
 // Pages
 import { Keychain } from './pages/Keychain';
@@ -16,18 +16,20 @@ export default function AppRoutes() {
     // const setBypassMobileWarning = useSetRecoilState(bypassMobileWarningAtom);
 
     return (
-        <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route path="about" element={<About />} />
-                <Route path="keychain" element={<Keychain />} />
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="about" element={<About />} />
+                    <Route path="keychain" element={<Keychain />} />
 
-                {/* Using path="*"" means "match anything", so this route
-                acts like a catch-all for URLs that we don't have explicit
-                routes for. */}
-                <Route path="*" element={<NoMatch />} />
-            </Route>
-        </Routes>
+                    {/* Using path="*"" means "match anything", so this route
+                    acts like a catch-all for URLs that we don't have explicit
+                    routes for. */}
+                    <Route path="*" element={<NoMatch />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
 );
 }
 

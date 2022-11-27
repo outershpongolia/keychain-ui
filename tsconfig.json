@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "crypto": ["node_modules/crypto-browserify"],
       "stream": ["node_modules/readable-stream"]

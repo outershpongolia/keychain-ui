@@ -15,6 +15,7 @@ export const connection = new anchor.web3.Connection(RPC_URL, {
     confirmTransactionInitialTimeout: CONFIRM_TIMEOUT_MILLIS,
 });
 
+/*
 export const getApiUrl = (path: string) => {
     let url = process.env.REACT_APP_BASE_API_URL;
     if (path) {
@@ -22,4 +23,5 @@ export const getApiUrl = (path: string) => {
     }
     return url;
 };
+ */
 

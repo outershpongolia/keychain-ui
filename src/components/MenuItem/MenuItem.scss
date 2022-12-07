@@ -1,0 +1,32 @@
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    text-decoration: none;
+    padding: 12px 0;
+
+    &_active {
+        border-top: 4px solid var(--menu-selected);
+        
+        .menu-item__title {
+            color: var(--menu-selected);
+        }
+
+        .menu-item__icon {
+            fill: var(--menu-selected);
+        }
+    }
+
+    &__icon {
+        width: 28px;
+        fill: var(--menu-not-selected);
+    }
+    
+    &__title {
+        color: var(--menu-not-selected);
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+}

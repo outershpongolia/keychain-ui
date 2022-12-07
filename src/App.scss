@@ -1,0 +1,30 @@
+@import "./fonts.scss";
+
+:root {
+    --font-main: "Blender Pro";
+    --background-main: #1F2127;
+    --characters-white: #FFFFFF;
+    --wallet: #343848;
+    --wallet-characters: #D5DDF9;
+    --menu-selected: #BE7DFF;
+    --menu-not-selected: #73788A;
+    --favorites: #F8B600;
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-main);
+    
+    * {
+        box-sizing: border-box;
+        font-family: var(--font-main);
+        font-weight: 500;
+    }
+}
+
+.app {
+    height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+}

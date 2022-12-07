@@ -1,0 +1,92 @@
+.wallet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &_favorites {
+        padding: 6px 19px 10px 19px;
+        background-color: #131417;
+        box-shadow: 0px 3px 15px #000000B0;
+
+        .wallet__header {
+            background-color: transparent;
+        }
+
+        .wallet__wrapper {
+            gap: 6px;
+            color: var(--favorites);
+        }
+
+        .wallet__number {
+            background-color: transparent;
+        }
+
+        .wallet__name {
+            text-transform: uppercase;
+            font-size: 14px;
+            color: var(--favorites);
+        }
+
+        .wallet__items {
+            color: var(--favorites);
+        }
+    }
+
+    &__star {
+        fill: var(--favorites);
+    }
+
+    &__header {
+        cursor: pointer;
+        height: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--wallet);
+        border-radius: 5px;
+        padding: 11px;
+        position: relative;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        color: var(--wallet-characters);
+
+        &_right {
+            gap: 7px;
+        }
+    }
+
+    &__number {
+        font-family: "Industry";
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 12px;
+        color: var(--wallet);
+        background-color: var(--wallet-characters);
+        width: 18px;
+        height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+    }
+
+    &__name {
+        line-height: 18px;
+    }
+
+    &__items {
+        font-size: 16px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+}

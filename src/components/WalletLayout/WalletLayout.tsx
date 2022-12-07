@@ -12,10 +12,10 @@ export const WalletLayout: React.FC<IWalletLayoutProps> = () => {
     const data = useRecoilValue(walletAtom)
 
     return (
-        <div className="wallet-layout">    
+        <div className="wallet-layout">
             {data.map(x => {
                 return (
-                    <Wallet key={x.name} data={x} />
+                    <Wallet key={x.address} data={x} />
                 )
             })}
         </div>

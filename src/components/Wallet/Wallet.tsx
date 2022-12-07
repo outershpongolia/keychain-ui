@@ -32,20 +32,20 @@ export const Wallet: React.FC<IWalletProps> = ({ data }) => {
     }, [ setIsWalletOpened ])
 
     return (
-        <div className={`wallet ${data.name === "favorites" && "wallet_favorites"}`}>
+        <div className={`wallet ${data.address === "favorites" && "wallet_favorites"}`}>
             <div 
                 className="wallet__header" 
                 onClick={handleToggleWallet}
             >
                 <div className="wallet__wrapper">
                     <div className="wallet__number">
-                        {data.name === "favorites" ? <StarIcon className="wallet__star" /> : data.key}
+                        {data.address === "favorites" ? <StarIcon className="wallet__star" /> : data.order}
                     </div>
-                    <div className="wallet__name">{data.name === "favorites" ? "my favorites" : data.name}</div>
+                    <div className="wallet__name">{data.address === "favorites" ? "my favorites" : data.address}</div>
                 </div>
 
                 <div className="wallet__wrapper wallet__wrapper_right">
-                    <div className="wallet__items">{data.items.length}</div>
+                    <div className="wallet__items">{data.nfts.length}</div>
 
                     {isWalletOpened
                     ? <IoIosArrowDown 
@@ -66,10 +66,10 @@ export const Wallet: React.FC<IWalletProps> = ({ data }) => {
                 }}
             >
                 <div className="wallet__grid" ref={drawerRef}>
-                    {data.items.map(x => {
+                    {data.nfts.map(x => {
                         return (
                             <WalletItem 
-                                key={x.name + data.name}
+                                key={x.name + data.address}
                                 name={x.name} 
                                 image={x.image} 
                                 isProfile={x.isProfile} 

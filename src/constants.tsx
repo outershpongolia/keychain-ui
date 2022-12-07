@@ -15,93 +15,110 @@ export enum ERoute {
 
 export const data: IWallet[] = [
     {
-        name: "CWKA...kW06",
-        key: "1",
-        items: [
+        address: "CWKA...kW06",
+        key_address: "",
+        order: "1",
+        nfts: [
             {
                 name: "Kai #1231",
                 image: characterImage,
-                isProfile: true
+                isProfile: true,
+                url: ""
             },
             {
                 name: "Kai #2142",
                 image: characterImage,
-                isProfile: false
+                isProfile: false,
+                url: ""
             },
             {
                 name: "Fox",
                 image: characterImage,
-                isProfile: false
+                isProfile: false,
+                url: ""
             },
             {
                 name: "Supersniper",
                 image: characterImage,
-                isProfile: true
+                isProfile: true,
+                url: ""
             },
             {
                 name: "Kai #9221",
                 image: characterImage,
-                isProfile: false
+                isProfile: false,
+                url: ""
             },
             {
                 name: "Kai #533",
                 image: characterImage,
-                isProfile: false
+                isProfile: false,
+                url: ""
             }
         ]
     },
     {
-        name: "PSDA...53DA",
-        key: "2",
-        items: [
+        address: "PSDA...53DA",
+        key_address: "",
+        order: "2",
+        nfts: [
             {
                 name: "Kai #6643",
                 image: characterImage,
-                isProfile: false
+                isProfile: false,
+                url: ""
             },
             {
                 name: "Kai #7434",
                 image: characterImage,
-                isProfile: false
+                isProfile: false,
+                url: ""
             }
         ]
     },
     {
-        name: "LsS2...rf22",
-        key: "3",
-        items: [
+        address: "LsS2...rf22",
+        key_address: "",
+        order: "3",
+        nfts: [
             {
                 name: "Kai #5555",
                 image: characterImage,
-                isProfile: false
+                isProfile: false,
+                url: ""
             },
             {
                 name: "Kai #1111",
                 image: characterImage,
-                isProfile: false
+                isProfile: false,
+                url: ""
             },
             {
                 name: "Kai #3333",
                 image: characterImage,
-                isProfile: false
+                isProfile: false,
+                url: ""
             }
         ]
     }
 ]
 
 export const favorites: IWallet = {
-    name: "favorites",
-    key: "0",
-    items: [
+    address: "favorites",
+    key_address: "",
+    order: "0",
+    nfts: [
         {
             name: "Supersniper",
             image: characterImage,
-            isProfile: true
+            isProfile: true,
+            url: ""
         },
         {
             name: "Kai #7434",
             image: characterImage,
-            isProfile: false
+            isProfile: false,
+            url: ""
         }
     ]
 } 
